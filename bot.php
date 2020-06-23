@@ -20,7 +20,7 @@ $reff=readline(" # enter your user id or your refferal = ");
 file_put_contents("reff.txt",$reff);
 $jlah=readline(" # how many referrals do you want      = ");
 $time=readline(" # the time needed for the next reff   = ");
-$p=file_get_contents("git.txt");
+$p=file_get_contents("git.php");
 system('clear');
 echo $p;
 for($bpk=$jlah;$bpk--;){
