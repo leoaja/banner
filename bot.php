@@ -20,9 +20,8 @@ $reff=readline(" # enter your user id or your refferal = ");
 file_put_contents("reff.txt",$reff);
 $jlah=readline(" # how many referrals do you want      = ");
 $time=readline(" # the time needed for the next reff   = ");
-$p=file_get_contents("git.php");
 system('clear');
-echo $p;
+include('git.php');
 for($bpk=$jlah;$bpk--;){
  $bbz=generate_string($permitted_chars, 28);
 $bb=generate_string($permitted_chars4, 6);
@@ -75,7 +74,6 @@ curl_setopt($cm, CURLOPT_REFERER, true);
 curl_setopt($cm, CURLOPT_SSL_VERIFYPEER, 0);
 curl_setopt($cm, CURLOPT_HTTPHEADER, $hs);
 $resul = curl_exec($cm);
-var_dump($resul);
 $pkl=json_decode($resul);
 
 echo " # Created New Refferal = •   ";sleep(1);
